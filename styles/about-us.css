@@ -1,0 +1,53 @@
+main {
+    display: block;
+}
+
+nav {
+    display: inline;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    width: 980px;
+    margin: 0 auto;
+    font-family: tamagotchi;
+}
+
+span {
+    height: 500px;
+    width:  600px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 180px;
+    left: 120px;
+    border: solid 40px #c0c0b9;
+    box-shadow: inset 0 0 20px #777777;
+    border-radius: 25px;
+    background-color: lightgrey;
+}
+
+/* span > img {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;;
+} */
+
+p {
+    width: 600px;
+    height: 100px;
+}
+
+img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    margin: 0;
+    padding: 10px;
+}
+
+
+
+
+
