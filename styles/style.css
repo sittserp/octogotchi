@@ -34,7 +34,7 @@ main {
     justify-content: center;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
-    background-image: url('../assets/toma.png');
+    background-image: url('../assets/octo-back.jpg');
     background-size: cover;
 }
 
@@ -81,12 +81,9 @@ h2 {
     margin-right: 20px;
 }
 
-
 header img {
     height: var(--header-height);
 }
-
-
 
 content {
     width: 80%;
@@ -107,13 +104,11 @@ footer {
     box-shadow: var(--shadow);
 }
 
-
-
 .oval {
     padding-top: 70px;
     height: 980px;
     width: 843px;
-    background-color: #FFFF92;
+    background-image: url(../assets/octoblack1.jpg);
     border: black 1px solid;
     filter: drop-shadow(0px 10px 15px);
     background-size: cover;
@@ -132,3 +127,4 @@ span {
     border-radius: 25px;
     background-color: lightgrey;
 }
+

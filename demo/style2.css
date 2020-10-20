@@ -1,0 +1,136 @@
+
+body {
+    --color1: #ffffff;
+    --color2: #ffffff;
+    --color3: #ffffff;
+    --color4: #ffffff;
+    --color5: #ffffff;
+
+    /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
+    /* --color1: hsla(349, 69%, 76%, 1);
+    --color2: hsla(207, 67%, 44%, 1);
+    --color3: hsla(200, 61%, 56%, 1);
+    --color4: hsla(187, 41%, 94%, 1);
+    --color5: hsla(170, 28%, 95%, 1); */
+
+    /* --color1: hsla(45, 86%, 83%, 1);
+    --color2: hsla(135, 65%, 98%, 1);
+    --color3: hsla(315, 37%, 86%, 1);
+    --color4: hsla(45, 73%, 98%, 1);
+    --color5: hsla(224, 40%, 79%, 1); */
+    
+    --header-height: 80px;
+    --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
+    --gutter: 30px;
+    --footer-height: 25px;
+    
+    font-family: 'Titillium Web', sans-serif;
+    background-color: var(--color2);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: calc(var(--footer-height));
+    background-image: url('../assets/octo-eating.jpg');
+    background-size: ;
+}
+
+.background {
+}
+
+section {
+    background-color: var(--color5);
+   
+    width: 1000px;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: var(--gutter);
+    padding-bottom: var(--gutter);
+    margin-top: var(--gutter);
+    margin-bottom: var(--gutter);
+    border: solid 2px var(--color1);
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--color3);
+    height: var(--header-height);
+    box-shadow: var(--shadow);
+}
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--color3);
+    box-shadow: var(--shadow);
+}
+
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.gutter-right {
+    margin-right: 20px;
+}
+
+header img {
+    height: var(--header-height);
+}
+
+content {
+    width: 80%;
+}
+
+p {
+    margin: var(--gutter);
+}
+  
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: var(--footer-height);
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--color3);
+    box-shadow: var(--shadow);
+}
+
+.oval {
+    padding-top: 70px;
+    height: 980px;
+    width: 843px;
+    background-image: url(../assets/elephant.jpg);
+    border: black 1px solid;
+    filter: drop-shadow(0px 10px 15px);
+    background-size: cover;
+    border-radius: 50%;
+    animation: radiate 1.0s infinite ease-in-out;
+};
+
+@keyframes radiate {
+    0% {
+        filter: drop-shadow( 3px 10px 15px rgba(225, 1, 8, 9) scale(1.2));
+    }
+    20% {
+        filter: drop-shadow( 3px 10px 15px rgba(34, 151, 89, 19) scale(1.2));
+    }
+    40% {
+        filter: drop-shadow( 3px 10px 15px rgba(34, 11, 8, 19) scale(1.2));
+    }
+    60% {
+        filter: drop-shadow( 3px 10px 15px rgba(3, 51, 89, 9) scale(1.2));
+    }
+    80% {
+        filter: drop-shadow( 3px 10px 15px rgba(34, 1, 8, 9) scale(1.2));
+    }
+};
