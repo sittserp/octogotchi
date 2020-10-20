@@ -132,7 +132,7 @@ span {
     top: 180px;
     left: 120px;
     border: solid 40px #c0c0b9;
-    filter: drop-shadow(-10px 20px 10px);
+    box-shadow: inset 0 0 20px #777777;
     border-radius: 25px;
     background-color: lightgrey;
 }
