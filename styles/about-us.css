@@ -40,7 +40,6 @@ main {
 
 section {
     background-color: var(--color5);
-   
     width: 1000px;
     max-width: 80%;
     display: flex;
@@ -60,9 +59,11 @@ header {
     background-color: var(--color3);
     height: var(--header-height);
     box-shadow: var(--shadow);
+    @font-face {
+        font-family: 'Tamagotchi';
+        src: url(../assets/tamagotchi.ttf);
+    }
 }
-
-
 
 footer {
     display: flex;
@@ -71,10 +72,16 @@ footer {
     box-shadow: var(--shadow);
 }
 
+nav {
+    display: inline;
+}
 
 h2 {
     font-size: 1.8rem;
     font-weight: bold;
+    width: 980px;
+    margin: 0 auto;
+    font-family: tamagotchi;
 }
 
 .gutter-right {
@@ -130,6 +137,29 @@ span {
     background-color: lightgrey;
 }
 
+/* span > img {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;;
+} */
+
+p {
+    width: 600px;
+    float: left;
+    margin: 10px;
+    height: 100px;
+    text-align: left;
+}
+
+img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    margin: 0;
+    padding: 10px;
+    display: inline;
+}
+
 .arrow-buttons{
     padding-top: 0px;
     display: flex;
@@ -163,28 +193,16 @@ span {
     
 }
 
-span > img {
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
+/* .donny-vu {
+    position: absolute;
+    top: 200px;
+    left: 200px;
 }
 
-.richard-hillman {
-    position: absolute;
-    right: 100px;
-}
+.katie-berry {
+    position: relative;
+    bottom: 50px;;
+} */
 
-.richard-hillman {
-    position: absolute;
-    right: 100px;
-}
 
-.richard-hillman {
-    position: absolute;
-    right: 100px;
-}
 
-.richard-hillman {
-    position: absolute;
-    right: 100px;
-}
