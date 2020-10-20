@@ -71,6 +71,10 @@ footer {
     box-shadow: var(--shadow);
 }
 
+h1 {
+    font-size: 3em;
+    align-self: center;
+}
 
 h2 {
     font-size: 1.8rem;
@@ -91,6 +95,7 @@ content {
 
 p {
     margin: var(--gutter);
+    font-size: 1.4em;
 }
   
 footer {
@@ -122,6 +127,7 @@ span {
     height: 500px;
     width:  600px;
     display: flex;
+    flex-direction: column;
     position: absolute;
     top: 180px;
     left: 120px;
@@ -129,6 +135,16 @@ span {
     filter: drop-shadow(-10px 20px 10px);
     border-radius: 25px;
     background-color: lightgrey;
+}
+
+form {
+    align-self: center;
+    padding-top: 70px;
+    font-size: 1.2em;
+}
+
+label {
+    display: block;
 }
 
 .arrow-buttons{
