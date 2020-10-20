@@ -1,4 +1,4 @@
-const OCTOPUS = 'OCTOPUS';
+export const OCTOPUS = 'OCTOPUS';
 
 export function setOctopus(octopus) {
     const stringyOctopus = JSON.stringify(octopus);
