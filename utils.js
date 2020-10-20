@@ -11,7 +11,7 @@ export function getOctopus() {
 }
 
 export function noHp(octopus) {
-    if (octopus.hp <= 0) {
+    if (octopus.hp === 0) {
         return true;
     }
 }
