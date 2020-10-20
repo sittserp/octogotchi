@@ -19,6 +19,6 @@ form.addEventListener('submit', (e) => {
         food: 4
     });
 
-    // window.location.href = './game/';
+    window.location.href = './game/';
 
 });
