@@ -5,19 +5,6 @@ import { setOctopus, getOctopus, noHp } from '../utils.js';
 const rArrow = document.getElementById('right-arrow');
 const lArrow = document.getElementById('left-arrow');
 const mArrow = document.getElementById('middle-arrow');
-// Hearts constants
-const heartSix = document.getElementById('heart-six');
-const heartFive = document.getElementById('heart-five');
-const heartFour = document.getElementById('heart-four');
-const heartThree = document.getElementById('heart-three');
-const heartTwo = document.getElementById('heart-two');
-const heartOne = document.getElementById('heart-one');
-// Food Constants
-const foodFour = document.getElementById('food-four');
-const foodThree = document.getElementById('food-three');
-const foodTwo = document.getElementById('food-two');
-const foodOne = document.getElementById('food-one');
-
 // Function stuff ---------------------------------------------------------------------------------------------------------------------
 function eatFood() {
     const octopus = getOctopus();
