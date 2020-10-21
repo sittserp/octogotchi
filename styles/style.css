@@ -6,7 +6,7 @@ body {
     --color4: #ffffff;
     --color5: #ffffff; */
     
-    --header-height: 80px;
+    --header-height: 60px;
     --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
     --gutter: 30px;
     --footer-height: 25px;
@@ -42,16 +42,18 @@ section {
 
 header {
     display: flex; 
-    justify-content: flex-end;
-    color: black;
+    align-items: flex-end;
+    justify-content: space-between;
     height: var(--header-height);
     box-shadow: var(--shadow);
     font-family: tamagotchi;
     font-size: 20px;
 }
 
-nav {
-    display: inline;
+li {
+    display: inline-flex;
+    margin-top: 10px;
+    color: black;
 }
 
 footer {
@@ -59,24 +61,23 @@ footer {
     justify-content: flex-end;
     background-color: var(--color3);
     box-shadow: var(--shadow);
+    font-family: tamagotchi;
 }
 
 h1 {
     font-size: 3em;
     align-self: center;
+    font-family: tamagotchi;
 }
 
 h2 {
     font-size: 1.8rem;
     font-weight: bold;
+    justify-content: center;
 }
 
 .gutter-right {
     margin-right: 20px;
-}
-
-header img {
-    height: var(--header-height);
 }
 
 content {
@@ -125,6 +126,7 @@ span {
     box-shadow: inset 0 0 20px #777777;
     border-radius: 25px;
     background-color: lightgrey;
+    
 }
 
 form {
@@ -138,50 +140,61 @@ label {
 }
 
 .arrow-buttons{
-    padding-top: 0px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-content: center;
-    align-items: flex-end;
     position: absolute;
-    top: 775px;
-    left: 285px;
+    top: 750px;
+    left: 215px;
 }
 
-#left-arrow{
+#left-arrow {
     position: absolute;
-    padding: 10px;
-    right: 70px;
-    background-image: url('../assets/leftArrow.png');
+    padding: 20px;
+    right: 50px;
+    /* background-image: url('../assets/leftArrow.png'); */
     height: 20px;
     width: 20px;
+    justify-content: space-between;
     
 }
-#middle-arrow{
+#middle-arrow {
     position: absolute;
-    padding: 10px;
+    padding: 20px;
     left: 100px;
-    background-image: url('../assets/middleButton.png');
+    /* background-image: url('../assets/middleButton.png'); */
     height: 20px;
     width: 20px;
+    justify-content: space-between;
 }
 
-#right-arrow{
+#right-arrow {
     position: absolute;
-    padding: 10px;
-    left: 335px;
-    background-image: url('../assets/rightArrow.png');
+    padding: 20px;
+    left: 300px;
+    /* background-image: url('../assets/rightArrow.png'); */
     height: 20px;
     width: 20px;
+    justify-content: space-between;
 }
 
-#myVideo {
+/* #myVideo  {
     position: fixed;
     right: 0;
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-  }
+  } */
 
+div > button {
+    display: none;
+}
+
+img {
+    height: 100px;
+    align-items: center;
+    display: inline-flex;
+    margin: 0 20px;
+}
