@@ -4,3 +4,11 @@
     height: 30px;
     width: auto;
 }
+
+#main-octopodes {
+    height: 264px;
+    width: auto;
+    position: absolute;
+    top: 100px;
+    left: 205px;
+}
