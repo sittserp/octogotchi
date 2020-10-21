@@ -42,7 +42,7 @@ p div {
     margin-block: 10px;
 }
 
-img {
+img.authors {
     height: 80px;
     width: 80px;
     border-radius: 50%;
