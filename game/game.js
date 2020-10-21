@@ -5,7 +5,18 @@ import { setOctopus, getOctopus, noHp } from '../utils.js';
 const rArrow = document.getElementById('right-arrow');
 const lArrow = document.getElementById('left-arrow');
 const mArrow = document.getElementById('middle-arrow');
-
+// Hearts constants
+const heartSix = document.getElementById('heart-six');
+const heartFive = document.getElementById('heart-five');
+const heartFour = document.getElementById('heart-four');
+const heartThree = document.getElementById('heart-three');
+const heartTwo = document.getElementById('heart-two');
+const heartOne = document.getElementById('heart-one');
+// Food Constants
+const foodFour = document.getElementById('food-four');
+const foodThree = document.getElementById('food-three');
+const foodTwo = document.getElementById('food-two');
+const foodOne = document.getElementById('food-one');
 
 // Function stuff ---------------------------------------------------------------------------------------------------------------------
 function eatFood() {
@@ -91,10 +102,42 @@ rArrow.addEventListener('click', () => {
 
 });
 
+function healthChange() {
+    const octopus = getOctopus();
+    if (octopus.hp === 6) {
+        document.getElementById('heart-six').src = '../assets/heartthree.png';
+    } else if (octopus.hp === 5) {
+        document.getElementById('heart-six').src = '../assets/twohalfheart.png';
+    } else if (octopus.hp === 4) {
+        document.getElementById('heart-six').src = '../assets/twoheart.png';
+    } else if (octopus.hp === 3) {
+        document.getElementById('heart-six').src = '../assets/onehalfheart.png';
+    } else if (octopus.hp === 2) {
+        document.getElementById('heart-six').src = '../assets/oneheart.png';
+    } else if (octopus.hp === 1) {
+        document.getElementById('heart-six').src = '../assets/halfheart.png';
+    }
+}
+function foodChange() {
+    const octopus = getOctopus();
+    if (octopus.food === 4) {
+        document.getElementById('food-four').src = '../assets/4-fishie-row.png';
+    } else if (octopus.food === 3) {
+        document.getElementById('food-four').src = '../assets/3-fishie-row.png';
+    } else if (octopus.food === 2) {
+        document.getElementById('food-four').src = '../assets/2-fishie-row.png';
+    } else if (octopus.food === 1) {
+        document.getElementById('food-four').src = '../assets/1-fishie-row.png';
+    }
+}
+// Need to create what it will look like if 0 fish
+
+// Cant display 4 fish image after clicking button to add more fish.
+// Maybe it gets rid of the element? Could need to make an empty image of fish to keep slot?
 
 
+const healthCheck = setInterval(() => { healthChange(); }, 1000);
+const foodCheck = setInterval(() => { foodChange(); }, 1000);
 
-
-
-
-
+healthCheck;
+foodCheck;

@@ -6,53 +6,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/home.css">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/home.css">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>OCTOGOTCHI</title>
 </head>
+
 
 <body>
     <header>
-
+        <div>
+            <h1>
+                <a href="./about-us/index.html"></a>
+            </h1>
+        </div>
     </header>
 
     <!-- Main ----------------------------------------------- -->
 
     <main>
-
+        <img id="body-title" src="./assets/octogotchi-title.png">
+        <br>
         <div class="oval">
 
             <!-- <video autoplay muted loop id="myVideo">
                 <source src="url('https://www.youtube.com/watch?v=6BcltsCFKtg')" type="video">
             </video> -->
 
+            <!-- Screen ----------------------------------------------------------------------------------->
             <span class="screen">
-                <h1>Welcome to Octogotchi!</h1>
-                <p>Enter your name and the name of your new octopus. Your octopus eats pretty quickly, so make sure to
-                    keep it
-                    fed!</p>
-                <form action="submit">
-                    <label>
-                        Your Name: <input type="text" name="name"></label>
-                    <label>Octopus Name: <input type="text" name="pet-name">
-                    </label>
-                    <button>Start Parenting!</button>
+                <div class="text">
+                    <h1>Welcome to Octogotchi!</h1>
+                    <br>
+                    <p>Enter your name and the name of your new octopus. Your octopus eats at the rapid rate, so make
+                        sure to keep it
+                        fed!</p>
+                    <form id="form" action="submit">
+                        <section class="input-container">
+                            <div class="input"></div>
+                            Owner Name:<input type="text" name="name">
+                            Octopi Name:<input type="text" name="pet-name">
+                            <button id="form-button">Start Parenting!</button>
+                </div>
+                </section>
                 </form>
-            </span>
-            <!-- Arrows -->
-            <div class="arrow-buttons">
-                <button id="left-arrow"></button>
-                <button id="middle-arrow"></button>
-                <button id="right-arrow"></button>
-            </div>
-        </div>
+                <div class="arrow-buttons">
+                    <div>
+                        <input type="image" src="./assets/left-arrow.png" id="left-arrow"></button>
+                    </div>
 
+                    <div>
+                        <input type="image" src="./assets/circle.png" id="middle-button"></button>
+                    </div>
+
+                    <div>
+                        <input type="image" src="./assets/right-arrow.png" id="right-arrow"></button>
+                    </div>
+                </div>
+        </div>
+        </span>
+
+        <!-- (END OF FORM AND SCREEN) ARROW BUTTONS START ---------------------------------------------->
+        </div>
+        <br>
     </main>
 
-    <!-- Footer ----------------------------------------------- -->
+    <!-- Footer-------------------------------- ----------------------------------------------- -->
 
-    <footer>
+    <footer id="footer">
         <div class="copy gutter-right">&copy; 2020 Alchemy Code Lab</div>
     </footer>
 
