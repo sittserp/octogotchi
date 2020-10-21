@@ -12,9 +12,11 @@ function eatFood() {
     const octopus = getOctopus();
     if (octopus.food > 0) {
         octopus.food--;
+        octopus.fed++;
     }
     setOctopus(octopus);
 }
+
 function loseHealth() {
     const octopus = getOctopus();
     if (octopus.food === 0 && octopus.hp > 0) {
@@ -22,20 +24,26 @@ function loseHealth() {
     }
     setOctopus(octopus);
 }
+
 function addFood() {
     const octopus = getOctopus();
     if (octopus.food < 4) {
         octopus.food++;
-        octopus.fed++;
-        octopus.lifetime++;
     }
     setOctopus(octopus);
 }
+
 function addHealth() {
     const octopus = getOctopus();
     if (octopus.hp < 6) {
         octopus.hp++;
     }
+    setOctopus(octopus);
+}
+
+function addLifetime() {
+    const octopus = getOctopus();
+    octopus.lifetime++;
     setOctopus(octopus);
 }
 
@@ -55,7 +63,10 @@ const starving = setInterval(() => { loseHealth(); }, 1000);
 // checks hp of octopus on timed interval
 const hpCheck = setInterval(() => { if (noHp(octopus)) { window.location.href = '../results/'; } }, 1000);
 
+const stopWatch = setInterval(() => { addLifetime(); }, 1000);
 
+
+stopWatch;
 hungry;
 starving;
 
@@ -79,6 +90,7 @@ rArrow.addEventListener('click', () => {
     addHealth();
 
 });
+
 
 
 
