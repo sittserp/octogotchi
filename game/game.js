@@ -23,9 +23,11 @@ function eatFood() {
     const octopus = getOctopus();
     if (octopus.food > 0) {
         octopus.food--;
+        octopus.fed++;
     }
     setOctopus(octopus);
 }
+
 function loseHealth() {
     const octopus = getOctopus();
     if (octopus.food === 0 && octopus.hp > 0) {
@@ -33,20 +35,26 @@ function loseHealth() {
     }
     setOctopus(octopus);
 }
+
 function addFood() {
     const octopus = getOctopus();
     if (octopus.food < 4) {
         octopus.food++;
-        octopus.fed++;
-        octopus.lifetime++;
     }
     setOctopus(octopus);
 }
+
 function addHealth() {
     const octopus = getOctopus();
     if (octopus.hp < 6) {
         octopus.hp++;
     }
+    setOctopus(octopus);
+}
+
+function addLifetime() {
+    const octopus = getOctopus();
+    octopus.lifetime++;
     setOctopus(octopus);
 }
 
@@ -66,7 +74,10 @@ const starving = setInterval(() => { loseHealth(); }, 1000);
 // checks hp of octopus on timed interval
 const hpCheck = setInterval(() => { if (noHp(octopus)) { window.location.href = '../results/'; } }, 1000);
 
+const stopWatch = setInterval(() => { addLifetime(); }, 1000);
 
+
+stopWatch;
 hungry;
 starving;
 
@@ -93,29 +104,29 @@ rArrow.addEventListener('click', () => {
 
 function healthChange() {
     const octopus = getOctopus();
-    if (octopus.hp === 6){
+    if (octopus.hp === 6) {
         document.getElementById('heart-six').src = '../assets/heartthree.png';
-    } else if (octopus.hp === 5){
+    } else if (octopus.hp === 5) {
         document.getElementById('heart-six').src = '../assets/twohalfheart.png';
-    } else if (octopus.hp === 4){
+    } else if (octopus.hp === 4) {
         document.getElementById('heart-six').src = '../assets/twoheart.png';
-    } else if (octopus.hp === 3){
+    } else if (octopus.hp === 3) {
         document.getElementById('heart-six').src = '../assets/onehalfheart.png';
-    } else if (octopus.hp === 2){
+    } else if (octopus.hp === 2) {
         document.getElementById('heart-six').src = '../assets/oneheart.png';
-    } else if (octopus.hp === 1){
+    } else if (octopus.hp === 1) {
         document.getElementById('heart-six').src = '../assets/halfheart.png';
     }
 }
 function foodChange() {
     const octopus = getOctopus();
-    if (octopus.food === 4){
+    if (octopus.food === 4) {
         document.getElementById('food-four').src = '../assets/4-fishie-row.png';
-    } else if (octopus.food === 3){
+    } else if (octopus.food === 3) {
         document.getElementById('food-four').src = '../assets/3-fishie-row.png';
-    } else if (octopus.food === 2){
+    } else if (octopus.food === 2) {
         document.getElementById('food-four').src = '../assets/2-fishie-row.png';
-    } else if (octopus.food === 1){
+    } else if (octopus.food === 1) {
         document.getElementById('food-four').src = '../assets/1-fishie-row.png';
     }
 }
