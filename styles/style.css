@@ -87,7 +87,7 @@ header {
 label {
     display: block;
 }
-
+ 
 a {
     width: 220px;
     color: black;
@@ -134,13 +134,16 @@ a {
 }
 
 .form {
+    
     display: flex;
     justify-content: center;
+    
 }
 
 .input-container { 
     width: 100%;
     margin: 15px;
+    
 }
 
 .input {
@@ -175,6 +178,7 @@ justify-content: space-around;
     position: absolute;
     padding:16px;
     top: 510px;
+    left: 35px;
 
 }
 #middle-button {
@@ -183,6 +187,7 @@ justify-content: space-around;
     position: absolute;
     padding:16px;
     top: 510px;
+    right: 225px;
 }
 
 #right-arrow {
@@ -191,11 +196,17 @@ justify-content: space-around;
     position: absolute;
     padding:16px;
     top: 510px;
+    right: 40px;
 } 
+
 
 #body-title {
     width: 500px;
     position: absolute;
     z-index: 90;
     top: 145px
+}
+
+#contain { 
+    position: absolute;
 }
