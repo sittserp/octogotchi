@@ -16,7 +16,9 @@ form.addEventListener('submit', (e) => {
         owner: data.get('name'),
         name: data.get('pet-name'),
         hp: 6,
-        food: 4
+        food: 4,
+        fed: 4,
+        lifetime: 10
     });
 
     window.location.href = './game/';
