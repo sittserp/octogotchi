@@ -40,8 +40,36 @@ section {
 header {
     height: 50px;
     width:100%;
+    z-index: 80;
+    background-image: url('../assets/blue-paint.jpg'); 
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
 
- 
+nav {
+    width: 100%;
+    height: 100%;
+    justify-content: flex-end;
+    display: inline;
+}
+
+ul {
+    height: 100%;
+    width: 100%;
+}
+
+li {
+    display: inline-flex;
+    height: 100%;
+    width: 100%;
+}
+
+a {
+    height: 200px;
+    width: 200px; 
+    font-size: 15px;
 }
 
 h1 {
@@ -70,16 +98,8 @@ footer {
     height: 50px;
     width: 100%;
     bottom: 0;
-
 }
 
-header {
-    height: 50px;
-    width:100%;
-    z-index: 80;
-    background-image: url('../assets/blue-paint.jpg'); 
-    background-size: cover;
-}
 
 label {
     display: block;
