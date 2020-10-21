@@ -105,17 +105,17 @@ rArrow.addEventListener('click', () => {
 function healthChange() {
     const octopus = getOctopus();
     if (octopus.hp === 6) {
-        document.getElementById('heart-six').src = '../assets/heartthree.png';
+        document.getElementById('heart-three').src = '../assets/heartthree.png';
     } else if (octopus.hp === 5) {
-        document.getElementById('heart-six').src = '../assets/twohalfheart.png';
+        document.getElementById('heart-three').src = '../assets/twohalfheart.png';
     } else if (octopus.hp === 4) {
-        document.getElementById('heart-six').src = '../assets/twoheart.png';
+        document.getElementById('heart-three').src = '../assets/twoheart.png';
     } else if (octopus.hp === 3) {
-        document.getElementById('heart-six').src = '../assets/onehalfheart.png';
+        document.getElementById('heart-three').src = '../assets/onehalfheart.png';
     } else if (octopus.hp === 2) {
-        document.getElementById('heart-six').src = '../assets/oneheart.png';
+        document.getElementById('heart-three').src = '../assets/oneheart.png';
     } else if (octopus.hp === 1) {
-        document.getElementById('heart-six').src = '../assets/halfheart.png';
+        document.getElementById('heart-three').src = '../assets/halfheart.png';
     }
 }
 function foodChange() {
@@ -128,6 +128,8 @@ function foodChange() {
         document.getElementById('food-four').src = '../assets/2-fishie-row.png';
     } else if (octopus.food === 1) {
         document.getElementById('food-four').src = '../assets/1-fishie-row.png';
+    } else if (octopus.food === 0) {
+        document.getElementById('food-four').src = '../assets/no-fishie.png';
     }
 }
 // Need to create what it will look like if 0 fish
@@ -136,8 +138,8 @@ function foodChange() {
 // Maybe it gets rid of the element? Could need to make an empty image of fish to keep slot?
 
 
-const healthCheck = setInterval(() => { healthChange(); }, 1000);
-const foodCheck = setInterval(() => { foodChange(); }, 1000);
+const healthCheck = setInterval(() => { healthChange(); }, 10);
+const foodCheck = setInterval(() => { foodChange(); }, 10);
 
 healthCheck;
 foodCheck;
