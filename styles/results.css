@@ -1,5 +1,7 @@
 .dead-pic{
-    height: 200px;
+    height: 264px;
     width: auto;
-
+    position: absolute;
+    top: 100px;
+    left: 205px;
 }
