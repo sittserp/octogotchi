@@ -1,4 +1,4 @@
-import { setOctopus, getOctopus, noHp, OCTOPUS } from '../utils.js';
+import { setOctopus, getOctopus, noHp } from '../utils.js';
 
 
 // Set const----------------------------------------------------------------------------------------------------------------------------
@@ -26,6 +26,8 @@ function addFood() {
     const octopus = getOctopus();
     if (octopus.food < 4) {
         octopus.food++;
+        octopus.fed++;
+        octopus.lifetime++;
     }
     setOctopus(octopus);
 }
@@ -51,7 +53,7 @@ const starving = setInterval(() => { loseHealth(); }, 1000);
 
 // const octoStatus = setInterval(() => { console.log(currentOctopus.hp, 'octoStatus'); }, 1000);
 // checks hp of octopus on timed interval
-const hpCheck = setInterval(() => { if (noHp(octopus)) { window.location.href = '../index.html'; } }, 1000);
+const hpCheck = setInterval(() => { if (noHp(octopus)) { window.location.href = '../results/'; } }, 1000);
 
 
 hungry;
