@@ -3,13 +3,7 @@
     width: 100%;
 } */
 
-h2 {
-    display: flex;
-    flex-direction: row;
-    font-size: 1.8rem;
-    font-weight: bold;
-    width: 100%;
-    margin: 0 auto;
+h1 {
     font-family: tamagotchi;
 }
 
@@ -19,27 +13,15 @@ h6 {
     margin-bottom: 5px;
 }
 
-span {
-    height: 500px;
-    width:  600px;
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    top: 180px;
-    left: 120px;
-    border: solid 40px #c0c0b9;
-    box-shadow: inset 0 0 20px #777777;
-    border-radius: 25px;
-    background-color: rgb(211, 211, 211);
-}
-
 p div {
+    margin-top: 10px;
     width: 50px;
     height: 50px;
     font-size: 16px;
     display: inline-flex;
     line-height: .5em;
     margin-block: 10px;
+    float: right;
 }
 
 img {
@@ -48,6 +30,7 @@ img {
     border-radius: 50%;
     margin: 0;
     padding: 10px;
+    float: left;
 }
 
 /* IDS------------------------------------------------------------------------------------------------------- */
