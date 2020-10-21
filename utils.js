@@ -10,8 +10,8 @@ export function getOctopus() {
     return JSON.parse(stringyOctopus);
 }
 
-export function noHp(octopus) {
-    octopus = getOctopus();
+export function noHp() {
+    const octopus = getOctopus();
     if (octopus.hp === 0) {
         return true;
     }
