@@ -182,7 +182,7 @@ justify-content: space-around;
 } 
 
 #body-title {
-    width: 40%;
+    width: 500px;
     position: absolute;
     z-index: 90;
     top: 145px
