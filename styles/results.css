@@ -6,6 +6,10 @@ p {
     font-size: 1em;
 }
 
+#bubbles {
+    display: none;
+}
+
 
 
 

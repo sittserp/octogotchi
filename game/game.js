@@ -1,5 +1,8 @@
 import { setOctopus, getOctopus, noHp } from '../utils.js';
 
+const eatSound = new Audio('../sounds/chewing-breadstick.wav');
+const feedSound = new Audio('../sounds/slap.wav');
+const heartSound = new Audio('../sounds/heartbeat.wav');
 
 // Set const----------------------------------------------------------------------------------------------------------------------------
 const rArrow = document.getElementById('right-arrow');
@@ -11,6 +14,7 @@ function eatFood() {
     if (octopus.food > 0) {
         octopus.food--;
         octopus.fed++;
+        eatSound.play();
     }
     setOctopus(octopus);
 }
@@ -19,6 +23,7 @@ function loseHealth() {
     const octopus = getOctopus();
     if (octopus.food === 0 && octopus.hp > 0) {
         octopus.hp--;
+        heartSound.play();
     }
     setOctopus(octopus);
 }
@@ -27,6 +32,7 @@ function addFood() {
     const octopus = getOctopus();
     if (octopus.food < 4) {
         octopus.food++;
+        feedSound.play();
     }
     setOctopus(octopus);
 }
@@ -48,7 +54,7 @@ function addLifetime() {
 // -------------------------------------------------------------------------------------------------------------------------------------
 
 // gets Octopus from local storage
-const octopus = getOctopus();
+// const octopus = getOctopus();
 
 // const currentOctopus = setInterval(() => { getOctopus(); }, 1000);
 // octopus eats food every 1 second
@@ -59,7 +65,7 @@ const starving = setInterval(() => { loseHealth(); }, 1000);
 
 // const octoStatus = setInterval(() => { console.log(currentOctopus.hp, 'octoStatus'); }, 1000);
 // checks hp of octopus on timed interval
-const hpCheck = setInterval(() => { if (noHp(octopus)) { window.location.href = '../results/'; } }, 1000);
+const hpCheck = setInterval(() => { if (noHp()) { window.location.href = '../results/'; } }, 1000);
 
 const stopWatch = setInterval(() => { addLifetime(); }, 1000);
 
