@@ -5,10 +5,20 @@
     width: auto;
 }
 
+.foods{
+    position: absolute;
+    flex-direction: row-reverse;
+    top: -35px; 
+    height: 30px;
+    width: auto;
+    right: 0px;
+}
+
 #main-octopodes {
     height: 264px;
     width: auto;
     position: absolute;
     top: 100px;
     left: 205px;
+
 }
