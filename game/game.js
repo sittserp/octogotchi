@@ -108,13 +108,14 @@ function healthChange() {
 function foodChange() {
     const octopus = getOctopus();
     if (octopus.food === 4) {
-        document.getElementById('food-four').src = '../assets/4-fishie-row.png';
+        document.getElementById('food-four').src = '../assets/four-fishie-row.png';
     } else if (octopus.food === 3) {
-        document.getElementById('food-four').src = '../assets/3-fishie-row.png';
+        document.getElementById('food-four').src = '../assets/three-fishie-row.png';
+        console.log('../assets/3-fishie-row.png')
     } else if (octopus.food === 2) {
-        document.getElementById('food-four').src = '../assets/2-fishie-row.png';
+        document.getElementById('food-four').src = '../assets/two-fishie-row.png';
     } else if (octopus.food === 1) {
-        document.getElementById('food-four').src = '../assets/1-fishie-row.png';
+        document.getElementById('food-four').src = '../assets/one-fishie-row.png';
     } else if (octopus.food === 0) {
         document.getElementById('food-four').src = '../assets/no-fishie.png';
     }
