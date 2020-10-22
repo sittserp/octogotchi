@@ -153,8 +153,8 @@ function foodChange() {
     }
 }
 
-const healthCheck = setInterval(() => { healthChange(); }, 800);
-const foodCheck = setInterval(() => { foodChange(); }, 800);
+const healthCheck = setInterval(() => { healthChange(); }, 500);
+const foodCheck = setInterval(() => { foodChange(); }, 500);
 
 healthCheck;
 foodCheck;
