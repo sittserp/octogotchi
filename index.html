@@ -16,16 +16,17 @@
 <body>
     <header>
         <div class="header-links">
-            <a href="./about-us/index.html">About Us</a>
+            <a class="glow" href="./about-us/index.html">About Us</a>
+            <a class="glow" href="./octo-facts/index.html">Octopodes Facts</a>
         </div>
     </header>
 
     <!-- Main ----------------------------------------------- -->
 
     <main>
-        <img id="body-title" src="./assets/octogotchi-title.png">
+        <img id="body-title" src="./assets/octogotchi-title.png" alt="octogochi-title">
         <br>
-        <div class="oval">
+        <div class="oval glow2">
 
             <!-- Screen ----------------------------------------------------------------------------------->
             <span class="screen">
@@ -33,8 +34,8 @@
                     <h1>Welcome to Octogotchi!</h1>
                     <br>
                     <p>Control keys:</p><br>
-                    <p>Press F to add food</p><br>
-                    <p>Press M to add medpack</p>
+                    <p>Press F or <img src="./assets/right-arrow.png" alt=""> to add food</p><br>
+                    <p>Press M or <img src="./assets/left-arrow.png" alt=""> to add medpack</p>
                     <form id="form" action="submit">
                         <section class="input-container" id="contain">
                             <div class="input"></div>
@@ -46,15 +47,17 @@
                 </form>
                 <div class="arrow-buttons">
                     <div>
-                        <input type="image" src="./assets/left-arrow.png" id="left-arrow"></button>
+                        <input type="image" src="./assets/left-arrow.png" id="left-arrow"
+                            alt="left-arrow-button"></button>
                     </div>
 
                     <div>
-                        <input type="image" src="./assets/circle.png" id="middle-button"></button>
+                        <input type="image" src="./assets/circle.png" id="middle-button" alt="select-button"></button>
                     </div>
 
                     <div>
-                        <input type="image" src="./assets/right-arrow.png" id="right-arrow"></button>
+                        <input type="image" src="./assets/right-arrow.png" id="right-arrow"
+                            alt="right-arrow-button"></button>
                     </div>
                 </div>
         </div>
@@ -68,7 +71,7 @@
     <!-- Footer-------------------------------- ----------------------------------------------- -->
 
     <footer id="footer">
-        <div class="copy gutter-right">&copy; 2020 Alchemy Code Lab</div>
+        <div class="copy gutter-right"></div>
     </footer>
 
     <script type="module" src="./app.js"></script>

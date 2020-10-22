@@ -65,7 +65,7 @@ content {
 }
 
 p {
-    font-size: 1.4em;
+    font-size: 1.1em;
     text-align: left;
 }
 
@@ -89,9 +89,9 @@ label {
 }
  
 a {
-    width: 220px;
+    width: 280px;
     color: black;
-    font-size: 25px;
+    font-size: 18px;
 }
 /* CLasses ---------------------------------------------------------------------------------- */
 
@@ -158,9 +158,19 @@ justify-content: space-around;
 
 .header-links {
     display: flex;
-    justify-content: flex-end; 
+    justify-content: space-evenly; 
     line-height: 70px;
 }
+
+.glow {
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+
+
 
 /* IDS -------------------------------------------------------------------------------- */
 
@@ -211,3 +221,28 @@ justify-content: space-around;
     position: absolute;
 }
 
+
+
+@-webkit-keyframes glow {
+    from {
+      text-shadow: 
+      0 0 10px rgb(0, 0, 0),
+       0 0 20px rgb(42, 42, 42),
+        0 0 30px #5d5b5c,
+         0 0 40px #929091,
+          0 0 50px #c7c7c7,
+           0 0 60px #e0dfe0,
+            0 0 70px #fffdfe;
+    }
+
+    to {
+      text-shadow: 
+      0 0 20px #fff,
+       0 0 30px #ec96c1,
+        0 0 40px #f06dae,
+         0 0 50px #ff3399,
+          0 0 60px #fa3899,
+           0 0 70px #ee2f1e,
+            0 0 80px #ff534d;
+    }
+  }
