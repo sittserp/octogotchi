@@ -85,9 +85,8 @@ stopWatch;
 hungry;
 starving;
 sickness;
-
 hpCheck;
-console.log(hpCheck);
+
 
 
 // currentOctopus;
@@ -143,7 +142,6 @@ function foodChange() {
         document.getElementById('food-four').src = '../assets/four-fishie-row.png';
     } else if (octopus.food === 3) {
         document.getElementById('food-four').src = '../assets/three-fishie-row.png';
-        console.log('../assets/3-fishie-row.png')
     } else if (octopus.food === 2) {
         document.getElementById('food-four').src = '../assets/two-fishie-row.png';
     } else if (octopus.food === 1) {
