@@ -14,7 +14,7 @@ function eatFood() {
     if (octopus.food > 0) {
         octopus.food--;
         octopus.fed++;
-        eatSound;
+        eatSound.play();
     }
     setOctopus(octopus);
 }
@@ -40,7 +40,7 @@ function addFood() {
     const octopus = getOctopus();
     if (octopus.food < 4) {
         octopus.food++;
-        feedSound;
+        feedSound.play();
     }
     setOctopus(octopus);
 }
