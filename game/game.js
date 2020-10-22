@@ -8,7 +8,7 @@ const healthUpSound = new Audio('../sounds/health-up.wav');
 // Set const----------------------------------------------------------------------------------------------------------------------------
 const rArrow = document.getElementById('right-arrow');
 const lArrow = document.getElementById('left-arrow');
-const mArrow = document.getElementById('middle-arrow');
+const mArrow = document.getElementById('middle-button');
 // Function stuff ---------------------------------------------------------------------------------------------------------------------
 function eatFood() {
     const octopus = getOctopus();
@@ -109,6 +109,10 @@ rArrow.addEventListener('click', () => {
 
 lArrow.addEventListener('click', () => {
     addHealth();
+});
+
+mArrow.addEventListener('click', () => {
+    window.location.href = '../shark-attack/index.html';
 });
 
 document.addEventListener('keydown', (e) => {
