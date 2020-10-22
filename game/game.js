@@ -28,6 +28,15 @@ function loseHealth() {
     setOctopus(octopus);
 }
 
+function getSick() {
+    const octopus = getOctopus();
+    if (octopus.hp > 0) {
+        octopus.hp--;
+        heartSound.play();
+    }
+    setOctopus(octopus);
+}
+
 function addFood() {
     const octopus = getOctopus();
     if (octopus.food < 4) {
@@ -63,6 +72,9 @@ const hungry = setInterval(() => { eatFood(); }, 1000);
 // octopus loses health every 1 second
 const starving = setInterval(() => { loseHealth(); }, 1000);
 
+// octopus loses health every 5 seconds
+const sickness = setInterval(() => { getSick(); }, 5000);
+
 // const octoStatus = setInterval(() => { console.log(currentOctopus.hp, 'octoStatus'); }, 1000);
 // checks hp of octopus on timed interval
 const hpCheck = setInterval(() => { if (noHp()) { window.location.href = '../results/'; } }, 1000);
@@ -73,6 +85,7 @@ const stopWatch = setInterval(() => { addLifetime(); }, 1000);
 stopWatch;
 hungry;
 starving;
+sickness;
 
 hpCheck;
 console.log(hpCheck);
@@ -91,8 +104,22 @@ console.log(hpCheck);
 
 rArrow.addEventListener('click', () => {
     addFood();
-    addHealth();
+});
 
+lArrow.addEventListener('click', () => {
+    addHealth();
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'f') {
+        addFood();
+    }
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'm') {
+        addHealth();
+    }
 });
 
 function healthChange() {
