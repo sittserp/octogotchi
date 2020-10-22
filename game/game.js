@@ -78,7 +78,7 @@ const sickness = setInterval(() => { getSick(); }, 5000);
 // checks hp of octopus on timed interval
 const hpCheck = setInterval(() => { if (noHp(octopus)) { window.location.href = '../results/'; } }, 1000);
 
-const stopWatch = setInterval(() => { addLifetime(); }, 10000);
+const stopWatch = setInterval(() => { addLifetime(); }, 1000);
 
 
 stopWatch;
@@ -153,8 +153,8 @@ function foodChange() {
     }
 }
 
-const healthCheck = setInterval(() => { healthChange(); }, 800);
-const foodCheck = setInterval(() => { foodChange(); }, 800);
+const healthCheck = setInterval(() => { healthChange(); }, 100);
+const foodCheck = setInterval(() => { foodChange(); }, 100);
 
 healthCheck;
 foodCheck;
