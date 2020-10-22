@@ -221,7 +221,10 @@ justify-content: space-around;
     position: absolute;
 }
 
-
+#teacher {
+    height: 420px;
+    width: 600px;
+}
 
 @-webkit-keyframes glow {
     from {
