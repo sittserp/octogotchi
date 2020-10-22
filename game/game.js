@@ -61,13 +61,13 @@ function addLifetime() {
 const hungry = setInterval(() => { eatFood(); }, 1000);
 
 // octopus loses health every 1 second
-const starving = setInterval(() => { loseHealth(); }, 1000);
+const starving = setInterval(() => { loseHealth(); }, 10000);
 
 // const octoStatus = setInterval(() => { console.log(currentOctopus.hp, 'octoStatus'); }, 1000);
 // checks hp of octopus on timed interval
 const hpCheck = setInterval(() => { if (noHp()) { window.location.href = '../results/'; } }, 1000);
 
-const stopWatch = setInterval(() => { addLifetime(); }, 1000);
+const stopWatch = setInterval(() => { addLifetime(); }, 10000);
 
 
 stopWatch;
