@@ -156,6 +156,7 @@ function foodChange() {
 const healthCheck = setInterval(() => { healthChange(); }, 100);
 const foodCheck = setInterval(() => { foodChange(); }, 100);
 
+
 healthCheck;
 foodCheck;
 
