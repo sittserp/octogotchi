@@ -1,8 +1,9 @@
 import { setOctopus, getOctopus, noHp } from '../utils.js';
 
 const eatSound = new Audio('../sounds/chewing-breadstick.wav');
-const feedSound = new Audio('../sounds/slap.wav');
+const feedSound = new Audio('../sounds/slap.mp3');
 const heartSound = new Audio('../sounds/heartbeat.wav');
+const healthUpSound = new Audio('../sounds/health-up.wav');
 
 // Set const----------------------------------------------------------------------------------------------------------------------------
 const rArrow = document.getElementById('right-arrow');
@@ -23,6 +24,7 @@ function loseHealth() {
     const octopus = getOctopus();
     if (octopus.food === 0 && octopus.hp > 0) {
         octopus.hp--;
+        heartSound.play();
     }
     setOctopus(octopus);
 }
@@ -49,6 +51,7 @@ function addHealth() {
     const octopus = getOctopus();
     if (octopus.hp < 6) {
         octopus.hp++;
+        healthUpSound.play();
     }
     setOctopus(octopus);
 }
@@ -72,7 +75,7 @@ const hungry = setInterval(() => { eatFood(); }, 1000);
 const starving = setInterval(() => { loseHealth(); }, 1000);
 
 // octopus loses health every 5 seconds
-const sickness = setInterval(() => { getSick(); }, 5000);
+const sickness = setInterval(() => { getSick(); }, 10000);
 
 // const octoStatus = setInterval(() => { console.log(currentOctopus.hp, 'octoStatus'); }, 1000);
 // checks hp of octopus on timed interval
