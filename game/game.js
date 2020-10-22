@@ -60,7 +60,7 @@ function addLifetime() {
 }
 
 // -------------------------------------------------------------------------------------------------------------------------------------
-
+// 30 and 70 heart sound
 // gets Octopus from local storage
 const octopus = getOctopus();
 
