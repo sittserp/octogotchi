@@ -1,7 +1,7 @@
 import { setOctopus, getOctopus, noHp } from '../utils.js';
 
 const eatSound = new Audio('../sounds/chewing-breadstick.wav');
-const feedSound = new Audio('../sounds/slap.wav');
+const feedSound = new Audio('../sounds/slap.mp3');
 const heartSound = new Audio('../sounds/heartbeat.wav');
 
 // Set const----------------------------------------------------------------------------------------------------------------------------
