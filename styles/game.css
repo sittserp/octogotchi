@@ -29,6 +29,11 @@
 
 }
 
+#aquarium {
+    height: 420px;
+    width: 520px;
+}
+
 #body-title {
     width: 500px;
     position: absolute;
