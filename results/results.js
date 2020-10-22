@@ -14,3 +14,10 @@ middleButton.addEventListener('click', () => {
     window.location.href = '../index.html';
 });
 
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'n') {
+        localStorage.clear();
+        window.location.href = '../index.html';
+    }
+});
+
