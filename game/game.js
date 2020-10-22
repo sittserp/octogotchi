@@ -14,7 +14,7 @@ function eatFood() {
     if (octopus.food > 0) {
         octopus.food--;
         octopus.fed++;
-        eatSound;
+        eatSound.play();
     }
     setOctopus(octopus);
 }
@@ -40,7 +40,7 @@ function addFood() {
     const octopus = getOctopus();
     if (octopus.food < 4) {
         octopus.food++;
-        feedSound;
+        feedSound.play();
     }
     setOctopus(octopus);
 }
@@ -78,7 +78,7 @@ const sickness = setInterval(() => { getSick(); }, 5000);
 // checks hp of octopus on timed interval
 const hpCheck = setInterval(() => { if (noHp(octopus)) { window.location.href = '../results/'; } }, 1000);
 
-const stopWatch = setInterval(() => { addLifetime(); }, 10000);
+const stopWatch = setInterval(() => { addLifetime(); }, 1000);
 
 
 stopWatch;
@@ -153,8 +153,9 @@ function foodChange() {
     }
 }
 
-const healthCheck = setInterval(() => { healthChange(); }, 500);
-const foodCheck = setInterval(() => { foodChange(); }, 500);
+const healthCheck = setInterval(() => { healthChange(); }, 100);
+const foodCheck = setInterval(() => { foodChange(); }, 100);
+
 
 healthCheck;
 foodCheck;
