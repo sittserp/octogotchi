@@ -91,17 +91,6 @@ starving;
 sickness;
 hpCheck;
 
-
-
-// currentOctopus;
-// octoStatus;
-// setInterval(() => { console.log(noHp(octopus), 'noHp'); }, 1000);
-// const hpCheck = setInterval(() => {
-//     if (octopus.hp === 0) {
-//         window.location.href = '../index.html';
-//     }
-// }, 1000);
-
 // Event Listerners for arrows ---------------------------------------------------------------------------------------------------------------------
 
 rArrow.addEventListener('click', () => {
