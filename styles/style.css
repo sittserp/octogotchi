@@ -226,6 +226,11 @@ justify-content: space-around;
     width: 800px;
 }
 
+#shark {
+    height: 250px;
+    width: 250px;
+}
+
 @-webkit-keyframes glow {
     from {
       text-shadow: 
