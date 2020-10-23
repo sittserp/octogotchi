@@ -33,6 +33,11 @@ img {
     float: left;
 }
 
+.octo-fact {
+    font-size: 10px;
+    color: teal;
+}
+
 .about {
     font-size: 10px;
 }
