@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/reset.css">
     <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/shark-attack.css">
     <title>OCTOGOTCHI DISCLAIMER</title>
 </head>
 
@@ -27,53 +28,55 @@
         <img id="body-title" src="../assets/octogotchi-title.png" alt="octogotchi-virtual-pet">
         <div class="oval">
             <span class="screen">
-                <h1>Shark Attack!</h1>
-                <section class="shark">
-                    <div><img src="" alt="shark"></div>
+                <section class="center">
+
+                    <div id="mini-title">Shark Attack Game!</div>
+                    
+                    <section class="fighters">
+                            <div><img id="shark" src="../assets/shark-250.png" alt="shark ready to fight"></div>
+                            <br>
+                            <br>
+                            <div><img id="octopus" src="../assets/boxer.gif" alt="octopus ready to fight"></div>
+                    </section>
+                            
+                        <div>Wins: <span id="win-span">0</span></div>
+                        <div>Losses: <span id="loss-span">0</span></div>
+                        <div>Ties: <span id="draw-span">0</span></div>
+                        <div>Rounds Fought: <span id="games-played">0</span></div>
+                        <div id="final-result"></div>
+
+                         
                 </section>
-                <div><img src="" alt="win/loss"></div>
-                <section class="octopus">
-                    <div><img src="" alt="octo left"></div>
-                    <div><img src="" alt="octo head"></div>
-                    <div><img src="" alt="octo right"></div>
-                </section>
-                <div>Wins: <span id="win-span">0</span></div>
-                <div>Losses: <span id="loss-span">0</span></div>
-                <div>Ties: <span id="draw-span">0</span></div>
-                <div>Rounds Fought: <span id="games-played">0</span></div>
-                <div id="final-result"></div>
-
-
-                <div class="about-div">
-                </div>
-
-                <!-- Arrows ----------------------------------------------------------------------->
-
-                <div class="arrow-buttons">
-                    <div>
-                        <input type="image" src="../assets/left-arrow.png" id="left-arrow"
+                    <!-- Arrows ----------------------------------------------------------------------->
+                    
+                    <div class="arrow-buttons">
+                        <div>
+                            
+                            <input type="image" src="../assets/left-arrow.png" id="left-arrow"
                             alt="left-arrow-button"></button>
-                    </div>
-
-                    <div>
-                        <input type="image" src="../assets/circle.png" id="middle-button" alt="select-button"></button>
-                    </div>
-
-                    <div>
-                        <input type="image" src="../assets/right-arrow.png" id="right-arrow"
+                        </div>
+                        
+                        <div>
+                            
+                            <input type="image" src="../assets/circle.png" id="middle-button" alt="select-button"></button>
+                        </div>
+                        
+                        <div>
+                            
+                            <input type="image" src="../assets/right-arrow.png" id="right-arrow"
                             alt="right-arrow-button"></button>
+                        </div>
                     </div>
-                </div>
-            </span>
-
-        </div>
-
-    </main>
-
-    <!-- Footer ----------------------------------------------- -->
-
+                </span>
+                
+            </div>
+            
+        </main>
+        
+        <!-- Footer ----------------------------------------------- -->
+        
     <footer>
-        <div class="copy gutter-right">Created By Katie Berry, Donny Vu, Perry Sittser, Richard Hillman</div>
+        <div class="glow">Created By Katie Berry, Donny Vu, Perry Sittser, Richard Hillman</div>
     </footer>
 
     <script type="module" src="shark-attack.js"></script>
