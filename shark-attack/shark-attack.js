@@ -47,15 +47,18 @@ function finalResult() {
     if (win === 10) {
         octopus.hp = 6;
         octopus.food = 4;
-        alert('You won! Full health, belly full, and back home!');
+        alert('You punched that SHARKS FACE SO GOOooOOD! FULL HEALTH, FULL FOOD!');
+        setOctopus(octopus);
+        window.location.href = '../game/index.html';
     }
     if (loss === 20 && octopus.hp > 3) {
         octopus.hp = 3;
-        alert('You lost :(  Take your ball and go home.');
+        alert('You SUCK, LITERALLY, YOU HAVE SUCKERS! HEALTH TO 1.5 HEARTS!');
+
     }
     if (loss === 15 && octopus.hp <= 3) {
         octopus.hp--;
-        alert('Shark Bite!! Game OVER.');
+        alert('Shark BAIT OOOOO AH AH, -1 HEALTH');
     } else {
         return;
     }
