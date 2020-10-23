@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/reset.css">
     <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/shark-attack.css">
     <title>OCTOGOTCHI DISCLAIMER</title>
 </head>
 
@@ -27,41 +28,41 @@
         <img id="body-title" src="../assets/octogotchi-title.png" alt="octogotchi-virtual-pet">
         <div class="oval">
             <span class="screen">
-                <h1>Shark Attack!</h1>
-                <section class="shark">
-                    <div><img id="shark" src="../assets/shark-250.png" alt="shark"></div>
+                <section class="center">
+
+                    <div id="mini-title">Shark Attack Game!</div>
+
+                    <section class="fighters">
+                        <div><img id="shark" src="../assets/shark-250.png" alt="shark ready to fight"></div>
+                        <br>
+                        <br>
+                        <div><img id="octopus" src="../assets/boxer.gif" alt="octopus ready to fight"></div>
+                    </section>
+
+                    <div>Wins: <span id="win-span">0</span></div>
+                    <div>Losses: <span id="loss-span">0</span></div>
+                    <div>Ties: <span id="draw-span">0</span></div>
+                    <div>Rounds Fought: <span id="games-played">0</span></div>
+                    <div id="final-result"></div>
+
+
                 </section>
-                <section class="octopus">
-                    <div><img src="../assets/octopus-fighting-1.png" alt="octo head"></div>
-                </section>
-                <p>Press L or <img src="./assets/left-arrow.png" alt=""> for left jab.</p>
-                <p>Press R or <img src="./assets/right-arrow.png" alt=""> for right cross.</p>
-                <p>Press B or <img src="../assets/circle.png" alt=""> for beak bite.</p>
-                <div>Wins: <span id="win-span">0</span></div>
-                <div>Losses: <span id="loss-span">0</span></div>
-                <div>Ties: <span id="draw-span">0</span></div>
-                <div>Rounds Fought: <span id="games-played">0</span></div>
-                <div id="final-result"></div>
-
-
-                <div class="about-div">
-                </div>
-
                 <!-- Arrows ----------------------------------------------------------------------->
 
                 <div class="arrow-buttons">
                     <div>
-                        <input type="image" src="../assets/left-arrow.png" id="left-arrow"
-                            alt="left-arrow-button"></button>
+
+                        <input type="image" src="../assets/left-arrow.png" id="left-arrow" alt="left-arrow-button">
                     </div>
 
                     <div>
-                        <input type="image" src="../assets/circle.png" id="middle-button" alt="select-button"></button>
+
+                        <input type="image" src="../assets/circle.png" id="middle-button" alt="select-button">
                     </div>
 
                     <div>
-                        <input type="image" src="../assets/right-arrow.png" id="right-arrow"
-                            alt="right-arrow-button"></button>
+
+                        <input type="image" src="../assets/right-arrow.png" id="right-arrow" alt="right-arrow-button">
                     </div>
                 </div>
             </span>
@@ -73,7 +74,7 @@
     <!-- Footer ----------------------------------------------- -->
 
     <footer>
-        <div class="copy gutter-right">Created By Katie Berry, Donny Vu, Perry Sittser, Richard Hillman</div>
+        <div class="glow">Created By Katie Berry, Donny Vu, Perry Sittser, Richard Hillman</div>
     </footer>
 
     <script type="module" src="shark-attack.js"></script>

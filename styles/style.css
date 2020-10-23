@@ -74,6 +74,8 @@ footer {
     height: 50px;
     width: 100%;
     bottom: 0;
+    background-image: url('../assets/blue-paint.jpg'); 
+    background-size: cover;
 }
 
 header {
@@ -89,7 +91,6 @@ label {
 }
  
 a {
-    width: 280px;
     color: black;
     font-size: 18px;
 }
@@ -131,6 +132,7 @@ a {
 .text {
     margin: 20px;
     padding-left: 10px;
+    text-align: center;
 }
 
 .form {
@@ -169,8 +171,6 @@ justify-content: space-around;
     -moz-animation: glow 1s ease-in-out infinite alternate;
     animation: glow 1s ease-in-out infinite alternate;
   }
-
-
 
 /* IDS -------------------------------------------------------------------------------- */
 
@@ -219,16 +219,6 @@ justify-content: space-around;
 
 #contain { 
     position: absolute;
-}
-
-#teacher {
-    height: 420px;
-    width: 800px;
-}
-
-#shark {
-    height: 250px;
-    width: 250px;
 }
 
 @-webkit-keyframes glow {

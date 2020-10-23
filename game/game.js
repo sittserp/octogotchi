@@ -70,10 +70,10 @@ const octopus = getOctopus();
 
 // const currentOctopus = setInterval(() => { getOctopus(); }, 1000);
 // octopus eats food every 1 second
-const hungry = setInterval(() => { eatFood(); }, 1000);
+const hungry = setInterval(() => { eatFood(); }, 3000);
 
 // octopus loses health every 1 second
-const starving = setInterval(() => { loseHealth(); }, 1000);
+const starving = setInterval(() => { loseHealth(); }, 3000);
 
 // octopus loses health every 5 seconds
 const sickness = setInterval(() => { getSick(); }, 10000);
@@ -159,8 +159,8 @@ function foodChange() {
     }
 }
 
-const healthCheck = setInterval(() => { healthChange(); }, 100);
-const foodCheck = setInterval(() => { foodChange(); }, 100);
+const healthCheck = setInterval(() => { healthChange(); }, 200);
+const foodCheck = setInterval(() => { foodChange(); }, 200);
 
 
 healthCheck;
@@ -168,10 +168,11 @@ foodCheck;
 
 function sickOcto() {
     const octopus = getOctopus();
+    const skullOcto = document.getElementById('skull-octo');
     if (octopus.hp > 2) {
-        document.getElementById('main-octopodes').src = '../assets/rainbow-octo.gif';
+        skullOcto.style.display = 'none';
     } else {
-        document.getElementById('main-octopodes').src = '../assets/sick-octo.gif';
+        skullOcto.style.display = 'block';
     }
 }
 
