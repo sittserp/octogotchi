@@ -9,6 +9,7 @@ const healthUpSound = new Audio('../sounds/health-up.wav');
 const rArrow = document.getElementById('right-arrow');
 const lArrow = document.getElementById('left-arrow');
 const mArrow = document.getElementById('middle-button');
+
 // Function stuff ---------------------------------------------------------------------------------------------------------------------
 function eatFood() {
     const octopus = getOctopus();
@@ -165,3 +166,15 @@ const foodCheck = setInterval(() => { foodChange(); }, 100);
 healthCheck;
 foodCheck;
 
+function sickOcto() {
+    const octopus = getOctopus();
+    if (octopus.hp > 2) {
+        document.getElementById('main-octopodes').src = '../assets/rainbow-octo.gif';
+    } else {
+        document.getElementById('main-octopodes').src = '../assets/sick-octo.gif';
+    }
+}
+
+const sickCheck = setInterval(() => { sickOcto(); }, 100);
+
+sickCheck;
