@@ -1,14 +1,19 @@
-.screen {
-    margin: -20px 
-
+.center {
+    position: absolute;
+    left: 50px;
+}
+#mini-title {
+    font-size: px;
+    text-align: center;
 }
 
 #shark {
-    height: 250px;   
+    height: 160px;   
     width: auto;
 }
 
 #octopus {
-    height: 75px; 
-    width: 250px;
+    margin-top: -143px;
+    height: 240px; 
+    width: auto;
 }

@@ -1,6 +1,7 @@
 import { getOctopus, setOctopus } from '../utils.js';
 
 const octopus = getOctopus();
+const punchSound = new Audio('../sounds/punch.mp3');
 
 const winSpan = document.querySelector('#win-span');
 const lossSpan = document.querySelector('#loss-span');
@@ -43,16 +44,16 @@ function updateView() {
 }
 
 function finalResult() {
-    if (win === 2) {
+    if (win === 10) {
         octopus.hp = 6;
         octopus.food = 4;
         alert('You won! Full health, belly full, and back home!');
     }
-    if (loss === 2 && octopus.hp > 3) {
+    if (loss === 20 && octopus.hp > 3) {
         octopus.hp = 3;
         alert('You lost :(  Take your ball and go home.');
     }
-    if (loss === 2 && octopus.hp <= 3) {
+    if (loss === 15 && octopus.hp <= 3) {
         octopus.hp--;
         alert('Shark Bite!! Game OVER.');
     } else {
@@ -71,6 +72,7 @@ let gamesPlayed = 0;
 rArrow.addEventListener('click', () => {
     const computerWeapon = getRandomThrow();
     const playerWeapon = 'paper';
+    punchSound.play();
     // const playerChoice = playerWeapon.value;
     if (didUserWin(playerWeapon, computerWeapon) === 'win') {
         win++;
@@ -92,6 +94,7 @@ rArrow.addEventListener('click', () => {
 lArrow.addEventListener('click', () => {
     const computerWeapon = getRandomThrow();
     const playerWeapon = 'rock';
+    punchSound.play();
     // const playerChoice = playerWeapon.value;
     if (didUserWin(playerWeapon, computerWeapon) === 'win') {
         win++;
@@ -113,6 +116,7 @@ lArrow.addEventListener('click', () => {
 mArrow.addEventListener('click', () => {
     const computerWeapon = getRandomThrow();
     const playerWeapon = 'scissors';
+    punchSound.play();
     // const playerChoice = playerWeapon.value;
     if (didUserWin(playerWeapon, computerWeapon) === 'win') {
         win++;
