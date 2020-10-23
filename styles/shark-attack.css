@@ -1,0 +1,14 @@
+.screen {
+    margin: -20px 
+
+}
+
+#shark {
+    height: 250px;   
+    width: auto;
+}
+
+#octopus {
+    height: 75px; 
+    width: 250px;
+}
