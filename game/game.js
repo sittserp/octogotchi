@@ -168,11 +168,14 @@ foodCheck;
 
 function sickOcto() {
     const octopus = getOctopus();
+    const skullOcto = document.getElementById('skull-octo');
     if (octopus.hp > 2) {
-        document.getElementById('main-octopodes').src = '../assets/rainbow-octo.gif';
+        skullOcto.style.display = 'none';
     } else {
-        document.getElementById('main-octopodes').src = '../assets/sick-octo.gif';
+        skullOcto.style.display = 'block';
     }
 }
 
 const sickCheck = setInterval(() => { sickOcto(); }, 100);
+
+sickCheck;
