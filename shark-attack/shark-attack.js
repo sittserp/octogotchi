@@ -1,5 +1,7 @@
 import { getOctopus, setOctopus } from '../utils.js';
 
+// haha very nice code reuse!
+
 const octopus = getOctopus();
 const punchSound = new Audio('../sounds/punch.mp3');
 
