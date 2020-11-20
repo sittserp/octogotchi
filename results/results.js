@@ -16,6 +16,7 @@ middleButton.addEventListener('click', () => {
 
 document.addEventListener('keydown', (e) => {
     if (e.key === 'n') {
+        // nice use of the keyboard even listener!
         localStorage.clear();
         window.location.href = '../index.html';
     }

@@ -117,52 +117,47 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
+const heartImages = [
+    '../assets/halfheart.png',
+    '../assets/oneheart.png',
+    '../assets/onehalfheart.png',
+    '../assets/twoheart.png',
+    '../assets/twohalfheart.png',
+    '../assets/heartthree.png',
+];
+
 function healthChange() {
     const octopus = getOctopus();
-    if (octopus.hp === 6) {
-        document.getElementById('heart-three').src = '../assets/heartthree.png';
-    } else if (octopus.hp === 5) {
-        document.getElementById('heart-three').src = '../assets/twohalfheart.png';
-    } else if (octopus.hp === 4) {
-        document.getElementById('heart-three').src = '../assets/twoheart.png';
-    } else if (octopus.hp === 3) {
-        document.getElementById('heart-three').src = '../assets/onehalfheart.png';
-    } else if (octopus.hp === 2) {
-        document.getElementById('heart-three').src = '../assets/oneheart.png';
-    } else if (octopus.hp === 1) {
-        document.getElementById('heart-three').src = '../assets/halfheart.png';
-    }
+
+    document.getElementById('heart-three').src = heartImages[octopus.hp - 1];
 }
+
+const fishImages = [
+    '../assets/no-fishie.png',
+    '../assets/one-fishie-row.png',
+    '../assets/two-fishie-row.png',
+    '../assets/three-fishie-row.png',
+    '../assets/four-fishie-row.png',
+];
+
 function foodChange() {
     const octopus = getOctopus();
-    if (octopus.food === 4) {
-        document.getElementById('food-four').src = '../assets/four-fishie-row.png';
-    } else if (octopus.food === 3) {
-        document.getElementById('food-four').src = '../assets/three-fishie-row.png';
-    } else if (octopus.food === 2) {
-        document.getElementById('food-four').src = '../assets/two-fishie-row.png';
-    } else if (octopus.food === 1) {
-        document.getElementById('food-four').src = '../assets/one-fishie-row.png';
-    } else if (octopus.food === 0) {
-        document.getElementById('food-four').src = '../assets/no-fishie.png';
-    }
+    
+    document.getElementById('food-four').src = fishImages[octopus.food];
 }
 
 const healthCheck = setInterval(() => { healthChange(); }, 200);
 const foodCheck = setInterval(() => { foodChange(); }, 200);
 
-
+// no need for these, but i can see the linet gets mad without them, and it's nice to use variables to label processes
 healthCheck;
 foodCheck;
 
 function sickOcto() {
     const octopus = getOctopus();
     const skullOcto = document.getElementById('skull-octo');
-    if (octopus.hp > 2) {
-        skullOcto.style.display = 'none';
-    } else {
-        skullOcto.style.display = 'block';
-    }
+    
+    skullOcto.style.display = octopus.hp > 2 ? 'none' : 'block';
 }
 
 const sickCheck = setInterval(() => { sickOcto(); }, 100);
